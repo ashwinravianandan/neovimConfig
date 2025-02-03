@@ -41,6 +41,9 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'nvimdev/lspsaga.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
+Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
 
 "-------------------------------------------------------
@@ -107,9 +110,9 @@ nmap <silent> <Leader>c <c-w>c
 nmap <silent> <Leader>o <c-w>o 
 nmap <silent> <Leader>v <c-w>v 
 nmap <silent> <Leader>s <c-w>s 
-nmap <silent> <Leader>fd :cs f g <C-R>=expand( "<cword>" )<CR><CR>
-nmap <silent> <Leader>fr :cs f s <C-R>=expand( "<cword>" )<CR><CR>
-nmap <silent> <Leader>fc :cs f c <C-R>=expand( "<cword>" )<CR><CR>
+"nmap <silent> <Leader>fd :cs f g <C-R>=expand( "<cword>" )<CR><CR>
+"nmap <silent> <Leader>fr :cs f s <C-R>=expand( "<cword>" )<CR><CR>
+"nmap <silent> <Leader>fc :cs f c <C-R>=expand( "<cword>" )<CR><CR>
 
 "Sets the current working directory as the directory in which the current file
 "exists
@@ -350,6 +353,12 @@ augroup lsp_install
     " call s:on_lsp_buffer_enabled only for languages that has the server registered.
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+" Telescope bindings
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " for asyncomplete.vim log
 "let g:asyncomplete_log_file = expand('~/asyncomplete.log')
