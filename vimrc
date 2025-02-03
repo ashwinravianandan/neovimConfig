@@ -40,6 +40,7 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+Plug 'nvimdev/lspsaga.nvim'
 call plug#end()
 
 "-------------------------------------------------------
@@ -70,6 +71,7 @@ set nu "show line numbers
 "set wildmenu "shows list instead of just completing
 "set wildmode=list:longest,full
 set scrolloff=3
+set signcolumn=yes
 
 
 "-------------------------------------------------------
