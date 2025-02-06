@@ -1,7 +1,7 @@
 return {
    {
       'majutsushi/tagbar',
-      keys = { '<leader>tt', '<cmd>TagbarToggle<CR>', "show tagbar" }
+      keys = {{ '<leader>tb', '<cmd>TagbarToggle<CR>', "show tagbar" }}
    },
    'godlygeek/tabular',
    'octol/vim-cpp-enhanced-highlight',

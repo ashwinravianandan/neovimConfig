@@ -3,7 +3,7 @@ return {
    init = function()
       vim.g.project_command_hook = "BuildTags"
    end,
-   keys = {'<leader>pf', '<cmd>:call OpenProject()<CR>', desc="Open Vim project"}
+   keys = {{'<leader>pf', '<cmd>:call OpenProject()<CR>', desc="Open Vim project"}}
    },
    {
       'ashwinravianandan/vimNotes',

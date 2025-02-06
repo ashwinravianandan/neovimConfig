@@ -61,7 +61,7 @@ return{
 				vim.keymap.set('n', '<leader>fi', '<Cmd>Lspsaga subtypes<CR>', opts)
 				vim.keymap.set('n', '<leader>fc', '<Cmd>Lspsaga incoming_calls<CR>', opts)
 				vim.keymap.set('n', '<leader>fC', '<Cmd>Lspsaga outgoing_calls<CR>', opts)
-				vim.keymap.set('n', '<leader>o', '<Cmd>Lspsaga outline<CR>', opts)
+				vim.keymap.set('n', '<leader>tt', '<Cmd>Lspsaga outline<CR>', opts)
 				vim.keymap.set('n', '<leader>df', vim.lsp.buf.format, { buffer = args.buf })
 
 				--end
