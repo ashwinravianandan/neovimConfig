@@ -28,6 +28,7 @@ set rnu "show line numbers
 
 set shiftwidth=3
 set signcolumn=yes
+set cursorline
 set tabstop=3
 
 set formatprg=par\ -w80
