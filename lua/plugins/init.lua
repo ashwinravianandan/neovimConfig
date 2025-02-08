@@ -18,7 +18,7 @@ return {
          scope = { char = '▎', highlight = { "Function", "Label" } }
       },
    },
-   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+   { "catppuccin/nvim", name = "catppuccin", priority = 1000, opts={no_italic = true} },
    'tpope/vim-fugitive',
    'tpope/vim-commentary',
    'vim-scripts/a.vim',
