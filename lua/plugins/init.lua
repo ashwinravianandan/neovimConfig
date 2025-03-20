@@ -22,5 +22,6 @@ return {
    'tpope/vim-fugitive',
    'tpope/vim-commentary',
    'vim-scripts/a.vim',
-   'will133/vim-dirdiff'
+   'will133/vim-dirdiff',
+   'nvim-treesitter/nvim-treesitter',
 }

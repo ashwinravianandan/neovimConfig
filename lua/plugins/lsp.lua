@@ -62,7 +62,10 @@ return{
 				vim.keymap.set('n', '<leader>fc', '<Cmd>Lspsaga incoming_calls<CR>', opts)
 				vim.keymap.set('n', '<leader>fC', '<Cmd>Lspsaga outgoing_calls<CR>', opts)
 				vim.keymap.set('n', '<leader>tt', '<Cmd>Lspsaga outline<CR>', opts)
+				vim.keymap.set('n', ']g', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
+				vim.keymap.set('n', '[g', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
 				vim.keymap.set('n', '<leader>df', vim.lsp.buf.format, { buffer = args.buf })
+				vim.keymap.set('v', '<leader>df', vim.lsp.buf.format, { buffer = args.buf })
 
 				--end
 			end,
@@ -103,9 +106,14 @@ return{
 			sources = cmp.config.sources({
 				{ name = 'nvim_lsp' },
 				{ name = 'ultisnips' },  -- For ultisnips users.
-			}, {
+			},
+         {
+				{ name = 'path' },
+			},
+         {
 				{ name = 'buffer' },
-			})
+			}
+         )
 		})
 
 		cmp.setup.cmdline({ '/', '?' }, {
