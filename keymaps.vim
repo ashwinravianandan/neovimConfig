@@ -19,23 +19,23 @@ nmap <silent> <Leader>s <c-w>s
 "Sets the current working directory as the directory in which the current file exists
 nmap <silent> <Leader>wd :lcd! %:p:h<CR>
 
-inoremap < <><Left>
-inoremap <<space> <<space>
-inoremap << <<
-inoremap " ""<Left>
-inoremap ' ''<Left>
-inoremap ` ``<Left>
-inoremap ( ()<Left>
-inoremap [ []<Left>
-inoremap { {<CR>}O
-inoremap <C-u>" "
-inoremap <C-u>' '
-inoremap <C-u>< <
-inoremap <C-u>` `
-inoremap <C-u>( (
-inoremap <C-u>[ [
-inoremap <C-u>{ {
-inoremap <C-c>{ {}<Left>
-inoremap () ()
-inoremap {} {}
+" inoremap < <><Left>
+" inoremap <<space> <<space>
+" inoremap << <<
+" inoremap " ""<Left>
+" inoremap ' ''<Left>
+" inoremap ` ``<Left>
+" inoremap ( ()<Left>
+" inoremap [ []<Left>
+" inoremap { {<CR>}O
+" inoremap <C-u>" "
+" inoremap <C-u>' '
+" inoremap <C-u>< <
+" inoremap <C-u>` `
+" inoremap <C-u>( (
+" inoremap <C-u>[ [
+" inoremap <C-u>{ {
+" inoremap <C-c>{ {}<Left>
+" inoremap () ()
+" inoremap {} {}
 imap <Leader>o 
