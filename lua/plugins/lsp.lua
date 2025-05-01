@@ -46,8 +46,49 @@ return {
                -- https://www.kernel.org/doc/html/latest/admin-guide/LSM/Yama.html
                -- runInTerminal = false,
             },
+            {
+               name = "Attach to process",
+               type = "lldb",
+               request = "attach",
+               pid = function()
+                  return require("personal.dap_utils").pick_process_id()
+               end,
+               args = {},
+            },
          }
-      end
+      end,
+
+      keys = {
+         { '<F5>',       function() require('dap').continue() end,          desc = "Continue execution" },
+         { '<F10>',      function() require('dap').step_over() end,         desc = "Step over" },
+         { '<F11>',      function() require('dap').step_into() end,         desc = "Step into" },
+         { '<F12>',      function() require('dap').step_out() end,          desc = "Step out" },
+         { '<Leader>b',  function() require('dap').toggle_breakpoint() end, desc = "toggle breakpoint" },
+         { '<Leader>dr', function() require('dap').repl.open() end,         desc = "toggle breakpoint" },
+      }
+   },
+   {
+      "rcarriga/nvim-dap-ui",
+      config = function()
+         local dap, dapui = require("dap"), require("dapui")
+         dapui.setup();
+         dap.listeners.before.attach.dapui_config = function()
+            dapui.open()
+         end
+         dap.listeners.before.launch.dapui_config = function()
+            dapui.open()
+         end
+         dap.listeners.before.event_terminated.dapui_config = function()
+            dapui.close()
+         end
+         dap.listeners.before.event_exited.dapui_config = function()
+            dapui.close()
+         end
+      end,
+      dependencies = {
+         "mfussenegger/nvim-dap",
+         "nvim-neotest/nvim-nio"
+      }
    },
    {
       'neovim/nvim-lspconfig',
@@ -161,13 +202,17 @@ return {
                },
                {
                   { name = 'buffer' },
+               },
+               {
+                  { name = 'lazydev' },
+                  group_index = 0
                }
             )
          })
 
          cmp.event:on(
-         'confirm_done',
-         cmp_autopairs.on_confirm_done()
+            'confirm_done',
+            cmp_autopairs.on_confirm_done()
          )
 
          cmp.setup.cmdline({ '/', '?' }, {
@@ -195,5 +240,16 @@ return {
          vim.g.UltiSnipsExpandTrigger = "<C-e>"
          vim.g.UltiSnipsSnippetDirectories = { '/home/ashwin/.vim/UltiSnipsPersonalSnippets' }
       end
+   },
+   {
+      'ahmedkhalf/project.nvim',
+      config = function()
+         require("project_nvim").setup {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+         }
+      end
    }
+
 }
