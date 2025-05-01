@@ -1,6 +1,7 @@
 return {
 	{
 		'ashwinravianandan/vimProj',
+		'ashwinravianandan/vimNotes',
 		init = function()
 			vim.g.project_command_hook = "BuildTags"
 		end,
