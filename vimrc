@@ -30,5 +30,6 @@ set shiftwidth=3
 set signcolumn=yes
 set cursorline
 set tabstop=3
+set conceallevel=2
 
-set formatprg=par\ -w80
+"set formatprg=par\ -w80

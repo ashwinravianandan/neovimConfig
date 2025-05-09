@@ -4,10 +4,12 @@ return {
    { 'nvimdev/lspsaga.nvim', opts = {} },
    {
       "williamboman/mason.nvim",
+      version = "^1.0.0",
       opts = {}
    },
    {
       "williamboman/mason-lspconfig.nvim",
+      version = "^1.0.0",
       opts = {
          ensure_installed = { "clangd", "lua_ls" },
       }

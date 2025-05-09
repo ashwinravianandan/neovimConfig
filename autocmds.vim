@@ -4,6 +4,8 @@ augroup vimrc
    au BufRead *.jsx set ft=javascript
    au filetype haskell  call HaskellMode()
    au filetype markdown nmap <silent><buffer> <C-B> :call MarkDownToHtml()<CR>
+   au filetype norg nmap <silent><buffer> <C-B> :lua require("personal.utils").export_as_md()<CR>
+   " au filetype norg imap <silent><buffer> <C-l><C-o> :Telescope neorg insert_link<CR>
    au filetype markdown set spell
    au filetype cpp autocmd vimrc BufWritePost <buffer> call UpdateTags()
    au filetype javascript call JsMode()

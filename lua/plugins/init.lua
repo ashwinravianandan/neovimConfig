@@ -1,6 +1,7 @@
 return {
 	{
 		"folke/which-key.nvim",
+		"aklt/plantuml-syntax",
 		event = "VeryLazy",
 		opts = {
 			-- your configuration comes here
@@ -69,10 +70,10 @@ return {
 					enable = true,
 					additional_vim_regex_highlighting = false,
 				},
-				indent = {
-					enable = true,
-					additional_vim_regex_highlighting = false,
-				},
+				-- indent = {
+				-- 	enable = true,
+				-- 	additional_vim_regex_highlighting = false,
+				-- },
 			}
 		end
 	},
