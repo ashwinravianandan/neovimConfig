@@ -1,10 +1,7 @@
-require("config.lazy")
-
 local vimrc = vim.fn.stdpath("config") .. "/vimrc"
 vim.cmd.source(vimrc)
 
--- Setup vim colorscheme
-vim.cmd.colorscheme "catppuccin"
+require("config.lazy")
 
 local keymaps = vim.fn.stdpath("config") .. "/keymaps.vim"
 vim.cmd.source(keymaps)

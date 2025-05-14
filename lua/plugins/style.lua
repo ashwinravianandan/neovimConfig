@@ -26,7 +26,18 @@ return {
    -- },
    {
       'nvim-lualine/lualine.nvim',
-      opts = {},
+      opts = {
+         sections = {
+            lualine_c = {
+               {
+                  'filename',
+                  show_filename_only = false,
+                  path=1
+               }
+            }
+         },
+         theme = "auto"
+      },
       dependencies = { 'nvim-tree/nvim-web-devicons' }
    }
 }
