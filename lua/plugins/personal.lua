@@ -49,7 +49,7 @@ return {
    {
       "nvim-neorg/neorg-telescope",
       keys = {
-         { '<leader>nf', '<Plug>(neorg.telescope.find_norg_files)', desc = "find files" },
+         { '<leader>nf', '<Plug>(neorg.telescope.find_norg_files)',  desc = "find files" },
          { '<leader>nw', '<Plug>(neorg.telescope.switch_workspace)', desc = "switch workspaces" }
       }
    }
